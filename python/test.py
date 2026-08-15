@@ -1,19 +1,18 @@
 teks = "sigma sedang berjalan kesebuahdermaga hitam#ambatukam#"
 teks1 = "A#"
 teks2 = "ambatukam is king#"
-a = ""
 
-def read(teks):
-    current = ""
-    kata = 0
-    for i in range(len(teks)):
-        a = teks[i]
-        if " " in a and current != " ":
-            print("{a} mengandung spasi")
-            kata += 1
-        elif a == "#":
-            if current != " " and current != "#":
-                kata += 1
-        current = a
-    print(f"kata {kata}")
-read(teks2)
+a = [2, 3, 4]
+b = [2, 5, 6] 
+
+def remove(a, b):
+    #check a
+    for i in a:
+        #check b
+        if i in b:
+            a.remove(i)
+    return a, b
+print(remove(a, b))
+
+
+

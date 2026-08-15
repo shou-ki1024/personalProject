@@ -16,4 +16,3 @@ def fact(x:int):
 
 x = int(input())
 fact(x)
-
