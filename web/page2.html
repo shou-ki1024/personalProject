@@ -2,45 +2,52 @@
 <html>
 <head>
 	<title>Page2</title>
-	<meta name="viewport" content="width=device-width", intial-scale="1.0"></meta>
-	<link href="page2.css" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<link href="styles.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<nav>
-			<a class="navbutton" href="index.html">index</a>
-			<a class="navbutton">page1</a>
-			<a class="navbutton">page1</a>
-			<a class="navbutton">page1</a>
-			<a class="navbutton">page1</a>
-			<a class="navbutton">page1</a>
-		</nav>
+	  <nav>
+      <ul class="navContainer">
+        <li class="menu">
+          <img src="assets/menuButton.svg" alt="logo">
+        </li>
+        <li class="search"></li>
+        <hr>
+        <li>
+          <p>MyPortofolio<p>
+        </li>
+        <hr>
+        <li class="about"><a>about</a></li>
+        <li class="signinButton">
+          <button>sign in</button>
+        </li>
+      </ul>
+    </nav>
 	</header>
-	<main class="index">
-		<section class="container">
-			<hgroup>
-				<h1>Welcome to infinite creativity</h1>
-				<p>"sigma is the choosen one"</p>
-			</hgroup>
-		</section>
-		<section class="container2">
-			<div class="container2" data-variant="container">
-				<p class="container2" data-variant="p">sigma is tool to bring your ass</p>
-				<img src="rusdi.jpeg"></img>
-			</div>	
-		</section>
-		<section class="container container-3">
-			<p class="logintitle">Connect to your account </p>
-			<p class="input">Username</p>
-			<p class="input">Password</p>
-			<div class="buttondiv">
-			 <button>Login</button>
-			 <button class="register">Register</button>
-			</div>
-		</section>
-	</main>
+  <main>
+    <section class="container">
+        <section id="testSect">
+          <button onclick="sigma()">test</button>
+          <p id="test">test</p>
+          <script src="script.js"></script>
+        </section>
+
+        <section id="commentSect">
+          comments
+        </section>
+    </section>
+
+    <section>
+      yet another thing
+    </section>
+  </main>
+  <footer>
+      this is the end
+  </footer>
 </body>
 </html>
