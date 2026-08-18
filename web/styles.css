@@ -2,91 +2,74 @@
   --color1: #1E1E1E;
   --color2: #d9d9d9
 }
-
 body{
-  margin: 0;
+  display: grid;
+  margin: 0px;
+  grid-template-columns: 100px auto;
 }
 main{
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 }
-footer{
-  background-color: blue;
-}
-.container{
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  height: 400px;
-  border: 5px solid black;
-}
-#commentSect{
-  grid-column: 2;
-  grid-row: 1;
-  background-color: red;
-}
-#testSect{
+header{
   display: flex;
-  grid-column: 1;
-  grid-row: 1;
-  background-color: blue;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
 }
-nav {
+.searchbar{
   display: block;
-  width: 100vw;
-  height: 100px;
-  margin: 0;
-  align-content: center;
-  background-color: var(--color1);
-}
-.navContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0px 2px 0px 2px;
-}
-.menu{
-  display: inline-block;
-  background-color: var(--color2);
-  height: 70px;
-  width: 85px;
-  margin: 0px 10px 0px 10px;
-  border: 0px solid;
-  border-radius: 50px;
-}
-.search{
-  background-color: var(--color2);
-  height: 70px;
-  width: 350px;
-  margin: 0px 10px 0px 10px;
-  border-radius: 50px;
-}
-.about{
-  font-family: "Montserrat";
-  font-size: 32px;
-  margin: 0px 10px 0px 10px;
-}
-.signinButton{
-  margin: 0px 10px 0px 10px;
-}
-button{
-  height: 70px;
-  width: 200px;
-  margin: 0px;
-  font-size: 32px;
-  border-radius: 50px;
-}
-hr{
-  visibility: hidden;
-  width: 400px;
-  margin: 0;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  border: 2px solid black;
+  height: 60px;
+  width: 100vw
 }
 p{
-  display: inline;
-  font-size: 32px;
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
-li {
-  display: inline-block;
+.image-viewer{
+  display: flex;
+  flex-direction: column;
+}
+.grid-container{
+  display: grid;
+  background-color: #1E1E1E;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-auto-rows: 300px;
+
+  padding: 5px;
+  justify-content: center;
   align-content: center;
-  font-family: "Montserrat";
-  color: var(--color2);
+}
+.card {
+  display: block;
+  break-inside: avoid;
+  width: 100%;
+
+  padding: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 25px;
+  
+}
+.picture {
+  width: 100%;
+  object-fit: cover;
+}
+a{
+  display: block;
 }

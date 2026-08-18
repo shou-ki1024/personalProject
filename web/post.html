@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form id="postForm">
+            <input type="text" id="title" placeholder="title" required>
+            <textarea id="description" placeholder="description" required></textarea>
+            <input type="file" id="image" accept="image/*" required>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script>
+        document.getElementById('postForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const post = {
+        id: Date.now(),
+        title: document.getElementById('title').value,
+        author: document.getElementById('author').value,
+        description: document.getElementById('description').value,
+        date: new Date().toLocaleDateString()
+    };
+
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    posts.unshift(post); // newest first
+    localStorage.setItem('posts', JSON.stringify(posts));
+
+    window.location.href = './post.html';
+});
+    </script>
+</html>
